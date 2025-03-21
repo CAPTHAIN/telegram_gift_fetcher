@@ -23,7 +23,7 @@ from telegram_gift_fetcher import get_user_gifts
 import asyncio
 
 async def main():
-    client = TelegramClient('session', 123456, 'your_api_hash')
+    client = TelegramClient('session', 'your_api_id(as integer, not string)', 'your_api_hash')
     await client.start()
     gifts = await get_user_gifts(client, 'username')
     print(gifts)
