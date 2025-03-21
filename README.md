@@ -10,8 +10,7 @@
 - Reuse your Telegram(Telethon) client
 
 ## 🛠️ Setup
-1. Install: `pip install telethon requests beautifulsoup4`
-2. Get `api_id` and `api_hash` from [my.telegram.org](https://my.telegram.org)
+`pip install git+https://github.com/CAPTHAIN/telegram_gift_fetcher.git`
 
 ---
 
