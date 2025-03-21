@@ -25,7 +25,6 @@ def get_gift_collection_floor_price(collection_slug: str) -> Optional[float]:
 
     # Fetch new price if not in cache or cache is stale
     try:
-        print('fetch floor price for', collection_slug)
         url = f"https://fragment.com/gifts/{collection_slug}?sort=price_asc&filter=sale"
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "

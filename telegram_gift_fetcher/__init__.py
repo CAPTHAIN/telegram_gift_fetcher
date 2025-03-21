@@ -26,15 +26,15 @@ async def _resolve_username(client: TelegramClient, username: str) -> Optional[t
     return user.id, user.access_hash
 
 
-async def get_user_gifts(client: TelegramClient, username: str, offset: str = "", limit: int = 50) -> Dict:
+async def get_user_gifts(client: TelegramClient, username: str, offset: str = "", limit: int = 100) -> Dict:
     """
     Fetch gifts for a Telegram user using an existing client instance.
 
     Args:
         client (TelegramClient): An initialized and started TelegramClient instance.
         username (str): The target user's Telegram username.
-        offset (str, optional): Offset for pagination. Defaults to "".
-        limit (int, optional): Number of gifts to fetch. Defaults to 50.
+        offset (str, optional): Offset for pagination. Defaults to "". Use as "5"/"50"/"100"
+        limit (int, optional): Number of gifts to fetch. Defaults to 100.
 
     Returns:
         dict: Contains 'gifts' (list), 'count_gifts' (int), and 'total_cost' (dict with 'ton' and 'stars').
